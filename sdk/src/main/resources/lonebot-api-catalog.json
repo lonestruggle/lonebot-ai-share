@@ -1,0 +1,47 @@
+{
+  "version": "0.3.300",
+  "source": "https://stormjavadocs.z6.web.core.windows.net/index.html",
+  "notes": "LoneBot Storm-compat script API. status: done | partial | later. Geen sailing / POH collision-binary dump.",
+  "mouseFlow": [
+    "1. ClickPoints.forNpc/Object/Widget → random point in hull/clickbox/bounds",
+    "2. MouseMovementStrategy.generatePath(current, target) → Bezier/Linear/Direct shape",
+    "3. MouseManager.resamplePath(points, target) → density by distance",
+    "4. MouseManager.moveAlongPath(..., ease, fatigue) → Mouse.moveRaw each step",
+    "5. short human delay",
+    "6. Mouse.clickOnly(x,y) via active MouseBackend",
+    "INVOKE: Client.menuAction / MenuInteract where Storm uses queue"
+  ],
+  "packages": [
+    {"storm": "net.storm.sdk.items", "lonebot": "net.storm.sdk.items", "status": "done", "classes": ["Inventory", "Bank", "Bank.Inventory", "BankLocation", "Equipment", "EquipmentSlot", "GrandExchange", "Shop", "Trade", "DepositBox", "ItemSearch", "RlInventoryItem"]},
+    {"storm": "net.storm.sdk.items.info", "lonebot": "net.storm.sdk.items.info", "status": "done", "classes": ["ItemInfo", "ItemInfos", "ItemInfo.EquipmentBonuses", "ItemInfo.EquipmentDefinition", "ItemInfo.WeaponDefinition"]},
+    {"storm": "net.storm.sdk.entities", "lonebot": "net.storm.sdk.entities", "status": "done", "classes": ["NPCs", "Players", "TileObjects", "TileItems", "Tiles", "RlNpc", "RlPlayer", "RlTile", "RlTileObject", "RlTileItem"]},
+    {"storm": "net.storm.sdk.widgets", "lonebot": "net.storm.sdk.widgets", "status": "done", "classes": ["Widgets", "Dialog", "Tabs", "RlWidget", "Friends", "Production", "Prayer", "BankEquipment", "Minigames", "WidgetText"]},
+    {"storm": "net.storm.api.widgets", "lonebot": "net.storm.api.widgets", "status": "done", "classes": ["IWidgets", "IDialog", "ITabs", "IFriends", "IPrayers", "IProduction", "IMinigames", "IBankWornItems", "BankWornItem", "Tab", "EquipmentSlot", "MinigameTeleport", "ProductionQuantity", "InterfaceAddress", "WidgetGroup"]},
+    {"storm": "net.storm.sdk.game", "lonebot": "net.storm.sdk.game", "status": "done", "classes": ["Game", "Client", "Static", "Skills", "Vars", "Combat", "Camera", "Chat", "Worlds", "House", "WorldMap", "Prices", "GameThread"]},
+    {"storm": "net.storm.sdk.movement", "lonebot": "net.storm.sdk.movement", "status": "done", "classes": ["Movement", "Walker", "Reachable", "MovementHelper", "WalkClickHelper", "TilePathWalker"]},
+    {"storm": "net.storm.sdk.movement.pathfinder", "lonebot": "net.storm.sdk.movement.pathfinder", "status": "done", "classes": ["ChargeManager", "TeleportLoader", "TransportLoader", "Pathfinder", "GlobalPathfinder", "CollisionUtil", "PathfinderRequirements"]},
+    {"storm": "net.storm.api.movement.pathfinder", "lonebot": "net.storm.api.movement.pathfinder", "status": "done", "classes": ["CollisionMap", "GlobalCollisionMap", "LocalCollisionMap", "ChargeRequirement", "UnlockRequirement", "BitSet4D"]},
+    {"storm": "net.storm.api.movement.pathfinder.model", "lonebot": "net.storm.api.movement.pathfinder.model", "status": "done", "classes": ["Teleport", "Transport", "Requirements"]},
+    {"storm": "net.storm.sdk.magic", "lonebot": "net.storm.sdk.magic", "status": "done", "classes": ["Magic"]},
+    {"storm": "net.storm.sdk.input", "lonebot": "net.storm.sdk.input", "status": "done", "classes": ["Mouse", "Keyboard"]},
+    {"storm": "net.storm.sdk.community", "lonebot": "net.storm.sdk.community", "status": "done", "classes": ["WorldHopper"]},
+    {"storm": "net.storm.sdk.quests", "lonebot": "net.storm.sdk.quests", "status": "done", "classes": ["Quests"]},
+    {"storm": "net.storm.sdk.interact.builder", "lonebot": "net.storm.sdk.interact.builder", "status": "done", "classes": ["MenuFactory"]},
+    {"storm": "net.storm.sdk.utils", "lonebot": "net.storm.sdk.utils", "status": "done", "classes": ["Sleep", "AntiBan", "Time"]},
+    {"storm": "net.storm.api.domain.items", "lonebot": "net.storm.api.domain.items", "status": "done", "classes": ["IItem", "IInventoryItem"]},
+    {"storm": "net.storm.api.domain.actors", "lonebot": "net.storm.api.domain.actors", "status": "done", "classes": ["IActor", "INPC", "IPlayer"]},
+    {"storm": "net.storm.api.domain", "lonebot": "net.storm.api.domain", "status": "done", "classes": ["RuneLiteWrapper", "SceneEntity", "Transformable"]},
+    {"storm": "net.storm.api.domain.widgets", "lonebot": "net.storm.api.domain.widgets", "status": "done", "classes": ["IWidget"]},
+    {"storm": "net.storm.api.interact", "lonebot": "net.storm.api.interact", "status": "done", "classes": ["InteractMethod", "AutomatedMenu", "Automation", "WidgetAction"]},
+    {"storm": "net.storm.api.movement", "lonebot": "net.storm.api.movement", "status": "done", "classes": ["IMovement", "IWalker", "IReachable", "TilePath", "WalkOptions"]},
+    {"storm": "net.storm.api.domain.tiles", "lonebot": "net.storm.api.domain.tiles", "status": "done", "classes": ["ITile", "ITileObject", "ITileItem"]},
+    {"storm": "net.storm.sdk.sailing", "lonebot": null, "status": "later", "note": "niet F2P"},
+    {"storm": "net.storm.sdk.items.loadouts", "lonebot": "net.storm.sdk.items.loadouts", "status": "partial", "classes": ["Loadout"]},
+    {"storm": "net.storm.api.events", "lonebot": null, "status": "later"}
+  ],
+  "lonebotExtras": [
+    {"storm": null, "lonebot": "net.storm.sdk.prayer", "status": "done", "classes": ["Prayer"]},
+    {"storm": null, "lonebot": "net.storm.sdk.interact", "status": "done", "classes": ["InteractManager", "MenuInteract", "InteractWalkHelper", "ClickOnSight", "ClickPoints"]},
+    {"storm": null, "lonebot": "net.storm.sdk.api", "status": "done", "classes": ["ApiCatalog"]}
+  ]
+}

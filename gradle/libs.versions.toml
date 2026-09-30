@@ -1,0 +1,17 @@
+[versions]
+runelite = "1.13.0"
+guice = "5.1.0"
+lombok = "1.18.30"
+slf4j = "2.0.9"
+gson = "2.10.1"
+flatlaf = "3.2.5"
+
+[libraries]
+runelite-api = { module = "net.runelite:runelite-api", version.ref = "runelite" }
+runelite-client = { module = "net.runelite:client", version.ref = "runelite" }
+guice = { module = "com.google.inject:guice", version.ref = "guice" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+flatlaf = { module = "com.formdev:flatlaf", version.ref = "flatlaf" }

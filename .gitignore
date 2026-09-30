@@ -1,0 +1,54 @@
+# IDE / Cursor
+.cursor/
+
+# Gradle
+.gradle/
+**/build/
+!gradle/wrapper/**
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*~
+
+# Java
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+hs_err_pid*
+replay_pid*
+
+# Local / secrets
+*.log
+.update-token
+local.properties
+**/credentials*.txt
+**/*accounts*.json
+!update/**
+osrs 2FA/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Update staging (local downloads)
+update-pending/
+
+# Post-update pipeline output
+reports/
+
+# AI-share extras
+Sync-AiShare.ps1
+osrs 2FA/
+update/
+backups/
+reports/
+tools/
+*.bat
+!gradlew.bat
+lonebot-accounts*.json
